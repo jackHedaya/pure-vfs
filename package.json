@@ -1,0 +1,36 @@
+{
+  "name": "pure-vfs",
+  "version": "1.0.0",
+  "description": "an easy-to-use virtual file system to make working with files a blast!",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackHedaya/pure-vfs.git"
+  },
+  "keywords": [
+    "virtual",
+    "file",
+    "system",
+    "fs",
+    "vfs"
+  ],
+  "author": "Jack Hedaya <jackehedaya@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackHedaya/pure-vfs/issues"
+  },
+  "homepage": "https://github.com/jackHedaya/pure-vfs#readme",
+  "devDependencies": {
+    "husky": "^3.0.4",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/events": "^3.0.0"
+  }
+}
