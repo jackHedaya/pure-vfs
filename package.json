@@ -28,9 +28,11 @@
   "devDependencies": {
     "husky": "^3.0.4",
     "prettier": "^1.18.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "@types/events": "^3.0.0",
+    "@types/mz": "^0.0.32"
   },
   "dependencies": {
-    "@types/events": "^3.0.0"
+    "mz": "^2.7.0"
   }
 }
