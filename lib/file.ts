@@ -1,24 +1,22 @@
+import hash from 'object-hash'
+import fs from 'mz/fs'
+
 import DirectoryItem from './directoryItem'
-import { fs } from 'mz'
 
 export default class File extends DirectoryItem {
-  private _content: string = ''
+  private content: string = ''
 
-  constructor(name: string) {
+  constructor(name: string, content: string = '') {
     super(name)
+
+    this.content = content
   }
 
-  get content() {
-    return this._content
+  writeToSystem() {
+    return fs.writeFile(this.path, this.content)
   }
 
-  set content(newContent) {
-    if (this.parentFileSystem && this.parentFileSystem.initConfig.attach) {
-      fs.writeFile(this.path, newContent)
-        .then(_ => (this._content = newContent))
-        .catch(_ => {
-          throw `PureVFS: Error while writing to ${this.path}`
-        })
-    } else this._content = newContent
+  hash() {
+    return { path: this.path, hash: hash({ name: this.name, path: this.path, content: this.content }) }
   }
 }
