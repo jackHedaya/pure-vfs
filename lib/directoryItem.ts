@@ -1,6 +1,5 @@
 import FileSystem from './fileSystem'
 import path from 'path'
-import genId from './helpers/genId'
 
 export default abstract class DirectoryItem {
   name: string
